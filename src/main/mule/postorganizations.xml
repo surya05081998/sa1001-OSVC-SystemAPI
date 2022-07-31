@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="bd52b4d5-8f42-4168-ab1e-e93f35237041" basePath="/api/osvc/v1.4" >
+		<http:request-connection host="dev-osvc-ocloud1.us-e2.cloudhub.io" port="80" >
+			<http:authentication >
+				<http:basic-authentication username="Osvcdeveiuser" password="Oracleosvcdevpwd" />
+			</http:authentication>
+		</http:request-connection>
+	</http:request-config>
+	<sub-flow name="postorganizationsSubFlow" doc:id="4e3e4f0c-731a-4d06-9c1d-df709bf78c3c" >
+		<logger level="INFO" doc:name="Info: post organizations flow start Logger" doc:id="c7f19ab8-a265-4d60-a64f-9e5cf3b18ce2" message="post organizations flow started"/>
+		<logger level="INFO" doc:name="Logger" doc:id="7e000ca4-a7ac-4a8b-a729-c7b4de555e2b" message="#[payload]"/>
+		<http:request method="POST" doc:name="Request" doc:id="9bc1cff3-e527-4d93-a106-ae8cc29c4c36" config-ref="HTTP_Request_configuration" path="/organization"/>
+		<logger level="INFO" doc:name="Info: post organizations flow end Logger" doc:id="a8d5f799-363d-4ab0-b5b1-bc07c57705e7" message="post organizations flow ended"/>
+	</sub-flow>
+</mule>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>f5d11941-5d4b-43bc-a956-2fce5a3d86ad</groupId>
+  <artifactId>sa1001-osvc</artifactId>
+  <version>1.0.2</version>
+  <name>sa1001-osvc</name>
+  <properties>
+    <classifier>raml</classifier>
+    <main>sa1001-osvc.raml</main>
+    <status>published</status>
+    <originalFormatVersion>1.0</originalFormatVersion>
+    <apiVersion>v1</apiVersion>
+    <projectId>42e5f6a9-7d80-4abd-b775-48ca6262d3ab</projectId>
+    <branchId>master</branchId>
+    <commitId>71f6259b0b8c4cd1614e5af92c9816d9caa019b0</commitId>
+    <keywords/>
+    <type>rest-api</type>
+    <mainFile>sa1001-osvc.raml</mainFile>
+  </properties>
+  <repositories>
+    <repository>
+      <id>anypoint-exchange</id>
+      <url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
+    </repository>
+  </repositories>
+</project>
